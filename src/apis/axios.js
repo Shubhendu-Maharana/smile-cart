@@ -1,13 +1,13 @@
 import { keysToCamelCase } from "@bigbinary/neeto-cist";
 import axios from "axios";
 
-const transfromResponseKeysToCamelCase = response => {
+const transformResponseKeysToCamelCase = response => {
   if (response.data) response.data = keysToCamelCase(response.data);
 };
 
 const responseInterceptors = () => {
   axios.interceptors.response.use(response => {
-    transfromResponseKeysToCamelCase(response);
+    transformResponseKeysToCamelCase(response);
 
     return response.data;
   });
