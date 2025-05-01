@@ -30,7 +30,8 @@ const Checkout = () => {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
   const timerRef = useRef(null);
   const checkboxRef = useRef(null);
-  const { cartItems, clearCart } = useCartItemsStore.pickFrom();
+  const cartItems = useCartItemsStore.pickFrom();
+  const clearCart = useCartItemsStore.pickFrom();
   const { t } = useTranslation();
   const history = useHistory();
   const { isLoading: isLoadingProducts } = useFetchCartProducts(
