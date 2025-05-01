@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import App from "./App";
-import "./index.css";
+import "./common/i18n";
 import reportWebVitals from "./reportWebVitals";
 
 initializeAxios();
